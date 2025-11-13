@@ -2,7 +2,7 @@
 
 ### Context
 
-Our Delivro accounting team came to you with a request: to help them keep track of invoices related to each shipment. When our clients create shipments, it goes through our carrier partners (FedEx, UPS, GLS, etc...) and we receive invoices for the created shipments from each of these carriers. Our accounting team has no system to keep track of the invoices, and would like to be able to upload the invoice data directly to our system, so that we can match it with the shipments.
+Our Delivro accounting team came to you with a request: to help them keep track of invoices related to each shipment. When our clients create shipments, it goes through our carrier partners (FedEx, UPS, GLS, etc.) and we receive invoices for the created shipments from each of these carriers. Our accounting team has no system to keep track of the invoices, and would like to be able to upload the invoice data directly to our system, so that we can match it with the shipments.
 
 However, the carriers will sometimes send incorrect invoices as well! The weight or price could be wrong, in which case our accounting team notices and reports this issue to the carrier. When we receive a corrected invoice it is yet again uploaded for the same Shipment ID / Tracking Number and it is expected that the application will update the shipment with the latest invoice data.
 
@@ -30,13 +30,13 @@ The edge case:
 ### Important
 
 - You do NOT have to create an authentication mechanism, the whole process can be public. You do NOT lose any points for not doing this, we do not expect this of you
-- You can OPTIONALLY use wireframes found in the `/wireframes` folder to create the UI/UX, but you can also make it in any way you deem appropriate
+- You can OPTIONALLY use wireframes found in the `/wireframes` folder for inspiration, but you are strongly encouraged to come up with your own UI/UX
 - You can use any database you are familiar with, but we do recommend the usage of relational DBs
 - You MUST provide clear instructions on how to install and run the application
 - You MUST use any React based framework to create the frontend
 - You MUST use TypeScript on the Frontend and the Backend
 
-The choice of frameworks does not matter to us besides these conditions.
+The **choice of frameworks does not matter** to us besides these conditions.
 
 ### Bonus ideas (completely optional)
 
@@ -48,3 +48,7 @@ The choice of frameworks does not matter to us besides these conditions.
 ### Final remarks
 
 We do not penalize the usage of AI at all. You can complete this task anyhow you want. With that being said, we do strongly care about the result, and if the project is simply an AI generated slop without any post processing input from your side then your submission will not be a very strong contender. We will follow up with a code review call where you will have an opportunity to explain all of your stack choices and why you have implemented the task in your own way.
+
+### Task Submission
+
+Please push your work to a new PUBLIC repository on your Github or Gitlab profile and share the link to the repository with us. If you have deployed the app anywhere (Vercel, Netlify, etc.) then please share the url link to the deployment with us too.
