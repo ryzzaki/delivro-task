@@ -8,42 +8,41 @@ However, the carriers will sometimes send incorrect invoices as well! The weight
 
 ### The Task
 
-Create an application that will contain a page to view all the uploaded data in any way you deem appropriate and an upload preview modal to allow the user to submit the provided JSON data:
+Create a dashboard that will display all the shipments uploaded to the application so far and allow the user to insert new data by uploading JSON files containing invoice data. The file upload flow within the application should be as follows:
 
-- The user wants to upload a JSON file containing the invoices and shipments data (this is provided as `invoices_1.json` to you as part of this task).
-- Allow the user to preview the JSON before uploading it to check if there are any mistakes
-- Allow the user to submit the data to the backend
-- Save the data into a database of your choice on the backend
-- The saved data should be retrievable from the database and displayed to the user on the main page
+1. User selects a JSON file (e.g. the provided example file `invoices_1.json`) containing invoice and shipment data.
+2. The application will allow the user to preview the data within the JSON file before they confirm the upload.
+3. Invoice data gets uploaded to the backend and stored in the database in a format of your choosing.
+4. The main shipment dashboard will now display all the latest data, including data from the newly uploaded file.
 
-The edge case:
+It is possible that multiple JSON files will contain invoice information related to the same shipment, in which case you should keep history of all the invoiced prices for that shipment. The dashboard should mainly display the very last price that got uploaded, but there should be some way to view shipment's price history.
 
-- The user can come back to upload a second JSON file (this is provided as `invoices_2.json`) which contains a mix of some corrected invoices to existing shipments and also new invoices with new shipments. The data structures for `invoices_1.json` and `invoices_2.json` are the same.
+**IMPORTANT:** You can assume that objects within the JSON file with the same `id` field will always contain the same exact data. For example, if you have already encountered a shipment with the same `id`, all the other fields (e.g. `trackingNumber`, `provider`, `mode`, etc.) will contain the exact same information as last time.
 
 ### User Stories
 
 - User should be able to upload any of the `invoices_X.json` files
-- User should be able to preview the uploaded JSON before submitting it
-- User should be able to view uploaded data in the main screen
-- User should be able to view the shipments with the latest uploaded invoice price and weight (latest invoice is assumed to be correct)
+- User should be able to preview data withing the JSON file before submitting it
+- User should be able to view uploaded data though the shipment dashboard
+- User should be able to filter the dashboard to only view shipment's made by a specific company
 
 ### Important
 
-- You do NOT have to create an authentication mechanism, the whole process can be public. You do NOT lose any points for not doing this, we do not expect this of you
-- You can OPTIONALLY use wireframes found in the `/wireframes` folder for inspiration, but you are strongly encouraged to come up with your own UI/UX
+- This application is assumed to be entirely internal and thus, you do NOT have to create any mechanism of authentication
+- Application should be able to process and display large quantities of data without significant performance issues
+- You can OPTIONALLY use wireframes found in the `/wireframes` folder for inspiration, but you are strongly encouraged to come up with your own UI/UX ideas
 - You can use any database you are familiar with, but we do recommend the usage of relational DBs
-- You MUST provide clear instructions on how to install and run the application
-- You MUST use any React based framework to create the frontend
+- You MUST use any React-based solution to create the frontend
 - You MUST use TypeScript on the Frontend and the Backend
+- You MUST provide clear instructions on how to install and run the application
 
-The **choice of frameworks does not matter** to us besides these conditions.
+The **choice of frameworks and libraries does not matter** to us besides these conditions.
 
 ### Bonus ideas (completely optional)
 
 1. Implement a Docker container to run the app
 2. Deploy the application to any infrastructure provider of your choice
 3. Implement i18n (English and any other language of your choice)
-4. Add payload validation to the backend endpoint using Zod or any other package of your choice
 
 ### Final remarks
 
