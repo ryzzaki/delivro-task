@@ -35,6 +35,7 @@ It is possible that multiple JSON files will contain invoice information related
 - You MUST use any React-based solution to create the frontend
 - You MUST use TypeScript on the Frontend and the Backend
 - You MUST provide clear instructions on how to install and run the application
+- If your UI design requires the use of icons, feel free to use any source that falls under an open-source license _(Lucide, Font Awesome, Heroicons, etc.)_
 
 The **choice of frameworks and libraries does not matter** to us besides these conditions.
 
