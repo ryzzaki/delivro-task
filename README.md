@@ -11,7 +11,7 @@ However, the carriers will sometimes send incorrect invoices as well! The weight
 Create a dashboard that will display all the shipments uploaded to the application so far and allow the user to insert new data by uploading JSON files containing invoice data. The file upload flow within the application should be as follows:
 
 1. User selects a JSON file (e.g. the provided example file `invoices_1.json`) containing invoice and shipment data.
-2. The application will allow the user to preview the data within the JSON file before they confirm the upload.
+2. The application will allow the user to preview the data from the JSON file _in a table (you can use TanStack Table or any equivalent)**(\*)**_ before they confirm the upload.
 3. Invoice data gets uploaded to the backend and stored in the database in a format of your choosing.
 4. The main shipment dashboard will now display all the latest data, including data from the newly uploaded file.
 
@@ -22,9 +22,11 @@ It is possible that multiple JSON files will contain invoice information related
 ### User Stories
 
 - User should be able to upload any of the `invoices_X.json` files
-- User should be able to preview data withing the JSON file before submitting it
+- User should be able to preview data from the JSON file _using a table UI**(\*)**_ before submitting it
 - User should be able to view uploaded data though the shipment dashboard
 - User should be able to filter the dashboard to only view shipment's made by a specific company
+
+**Changes: (\*)** if you have started working on this task before 19.11.2025, then you do not have to implement the table UI as this was updated on this date.
 
 ### Important
 
